@@ -14,7 +14,7 @@
     --secondary-color: #313640;
     --tertiary-color: #e6e6e6;
     --letter-spacing: 1px;
-    --border-radius: 6px;
+    --border-radius: 4px;
     --element-border: 1px solid #aba9a9;
     --element-shadow: 1px 2px 3px rgba(148, 148, 148, 0.3);
 }
@@ -60,6 +60,14 @@ a:active {
     font-size: 1.2rem;
 }
 
+.dashboard-container > ul > li:not(.title) {
+    transition: padding-left .2s ease-in-out;
+}
+
+.dashboard-container > ul > li:not(.title):hover {
+    padding-left: 0.3rem;
+}
+
 .dashboard-title > li {
     display: flex;
     align-items: center;
@@ -101,15 +109,14 @@ a:active {
     grid-row: 1 / 2;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 1fr 1.5fr;
 }
 
 .header-searchbar-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: ;
-    margin: 0 3rem;
+    margin: 1rem 0 1rem 3rem;
 }
 
 .header-searchbar-container > .icon {
@@ -121,33 +128,92 @@ a:active {
     background-color: var(--tertiary-color);
     border: none;
     margin: 0 4rem 0 2rem;
-    padding: 0.3rem;
+    padding: 0.4rem 0.5rem;
     border-radius: var(--border-radius);
     border: var(--element-border);
-    /* transition: all .5s ease-in-out; CHIEDERE AL MAESTRO*/
+    transition: box-shadow .5s ease;
 }
 
 .header-searchbar-container > input:focus {
     outline: none;
     border: var(--element-border);
-    padding: 0.4rem;
     box-shadow: var(--element-shadow);
-    transition: all .5s ease-in-out;
-}
+} 
 
 .header-profile-container {
     display: flex;
     font-size: 0.9rem;
     font-weight: bold;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: flex-end;
     gap: 1.2rem;
+    margin: 1rem 0;
+    padding-right: 1rem;
 }
 
+.profile-logo-name {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 2rem;
+    gap: 0.2rem
+}
 
+.header-welcome-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-weight: bold;
+    gap: 1rem;
+    margin-left: 3rem;
+}
+
+.welcome-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.welcome-text-top {
+    font-size: 0.8rem;
+}
+
+.welcome-text-bot {
+    font-size: 1.1rem;
+    font-weight: bolder;
+}
+
+.header-buttons-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header-buttons-container > button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: var(--border-radius);
+    padding: 0.4rem 0;
+    width: 100px;
+    transition: box-shadow .5s ease;
+}
+
+.header-buttons-container > button:hover {
+    box-shadow: var(--element-shadow);
+}
 
 .main-container {
     background-color: var(--tertiary-color);
     grid-column: 2 / 3;
+}
+
+@media (max-width:1000px) {
+    .header-buttons-container {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
 }
