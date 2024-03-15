@@ -12,8 +12,11 @@
 :root {
     --primary-color: #f2f2f2;
     --secondary-color: #313640;
-    --tertiary-color: #eaeaea;
+    --tertiary-color: #e6e6e6;
     --letter-spacing: 1px;
+    --border-radius: 6px;
+    --element-border: 1px solid #aba9a9;
+    --element-shadow: 1px 2px 3px rgba(148, 148, 148, 0.3);
 }
 
 body,
@@ -54,6 +57,7 @@ a:active {
     grid-column: 1 / 2;
     grid-row: 1 / 3;
     padding: 0 15px 0 25px;
+    font-size: 1.2rem;
 }
 
 .dashboard-title > li {
@@ -61,7 +65,7 @@ a:active {
     align-items: center;
     gap: 1rem;
     letter-spacing: 5px;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-family: 'Snarsky', sans-serif;
     margin: 2rem 0 4rem 0;
     color: var(--primary-color);
@@ -93,11 +97,55 @@ a:active {
 
 .header-container {
     background-color: var(--primary-color);
+    color: var(--secondary-color);
     grid-row: 1 / 2;
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 2fr;
 }
+
+.header-searchbar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: ;
+    margin: 0 3rem;
+}
+
+.header-searchbar-container > .icon {
+    width: 22px;
+}
+
+.header-searchbar-container > input {
+    flex: 1;
+    background-color: var(--tertiary-color);
+    border: none;
+    margin: 0 4rem 0 2rem;
+    padding: 0.3rem;
+    border-radius: var(--border-radius);
+    border: var(--element-border);
+    /* transition: all .5s ease-in-out; CHIEDERE AL MAESTRO*/
+}
+
+.header-searchbar-container > input:focus {
+    outline: none;
+    border: var(--element-border);
+    padding: 0.4rem;
+    box-shadow: var(--element-shadow);
+    transition: all .5s ease-in-out;
+}
+
+.header-profile-container {
+    display: flex;
+    font-size: 0.9rem;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+}
+
+
 
 .main-container {
     background-color: var(--tertiary-color);
