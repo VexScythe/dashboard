@@ -270,6 +270,15 @@ a:active {
 
 .main-right-section {
     /* width: 250px; */
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.main-right-section > div > p {
+    padding: 1.5rem 0 1rem 1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 
 @media (max-width:1000px) {
