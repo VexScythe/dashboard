@@ -10,8 +10,9 @@
 }
 
 :root {
-    --primary-color: #e1e1e1;
+    --primary-color: #f2f2f2;
     --secondary-color: #313640;
+    --tertiary-color: #eaeaea;
     --letter-spacing: 1px;
 }
 
@@ -91,11 +92,14 @@ a:active {
 }
 
 .header-container {
-    background-color: blanchedalmond;
+    background-color: var(--primary-color);
     grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 2fr;
 }
 
 .main-container {
-    background-color: violet;
+    background-color: var(--tertiary-color);
     grid-column: 2 / 3;
 }
