@@ -13,6 +13,7 @@
     --primary-color: #f2f2f2;
     --secondary-color: #313640;
     --tertiary-color: #e6e6e6;
+    --card-text-color: #3f4552;
     --letter-spacing: 1px;
     --border-radius: 4px;
     --element-border: 1px solid #aba9a9;
@@ -58,6 +59,21 @@ a:active {
     grid-row: 1 / 3;
     padding: 0 15px 0 25px;
     font-size: 1.2rem;
+}
+
+.dashboard-title {
+    position: sticky;
+    top: 2rem;
+}
+
+.dashboard-navlink-top {
+    position: sticky;
+    top: 8.6rem;
+}
+
+.dashboard-navlink-bot {
+    position: sticky;
+    top: 25.6rem;
 }
 
 .dashboard-container > ul > li:not(.title) {
@@ -246,6 +262,7 @@ a:active {
 }
 
 .card-main {
+    color: var(--card-text-color);
     max-height: 80%;
     white-space: wrap;
     overflow: hidden;
@@ -269,7 +286,6 @@ a:active {
 }
 
 .main-right-section {
-    /* width: 250px; */
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
@@ -279,6 +295,75 @@ a:active {
     padding: 1.5rem 0 1rem 1rem;
     font-weight: bold;
     font-size: 1.2rem;
+}
+
+.main-right-annoucements-card-container {  
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1rem .8rem;
+    margin-right: 1rem;
+}
+
+.announcement-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem .4rem;
+    gap: .3rem;
+}
+
+.central {
+    border-top: var(--element-border);
+    border-bottom: var(--element-border);
+}
+
+.announcement-top {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.announcement-main {
+    color: var(--card-text-color);
+    font-size: .8rem;
+}
+
+.main-right-trending-card-container {
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1rem .8rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.trending-card {
+    display: flex;
+    padding: 1rem .4rem;
+    gap: .3rem;
+    align-items: center;
+}
+
+.trending-profile {
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    margin-left: .3rem;
+}
+
+.trending-top {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.trending-bot {
+    color: var(--card-text-color);
+    font-size: .8rem;
 }
 
 @media (max-width:1000px) {
